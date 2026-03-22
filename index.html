@@ -1,23 +1,111 @@
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuvium | Your Spiritual AI Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #062e24; color: #d4af37; font-family: 'Segoe UI', serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .container { border: 2px solid #d4af37; padding: 3rem; border-radius: 15px; background: rgba(0,0,0,0.2); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: 3px; }
-        p { font-size: 1.2rem; color: #f0e68c; max-width: 400px; line-height: 1.6; }
-        .launch { margin-top: 2rem; font-weight: bold; border-top: 1px solid #d4af37; padding-top: 1rem; }
+        :root {
+            --shuvium-gold: #D4AF37;
+            --shuvium-purple: #1a0b2e;
+            --shuvium-accent: #4a1d96;
+        }
+        body {
+            background: radial-gradient(circle at center, var(--shuvium-accent) 0%, var(--shuvium-purple) 100%);
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .gold-border { border: 1px solid var(--shuvium-gold); }
+        .gold-text { color: var(--shuvium-gold); }
+        .gold-btn {
+            background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            color: #1a0b2e;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .gold-btn:hover { transform: scale(1.05); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>SHUVIUM</h1>
-        <p>Unlock the wisdom of the Vedas with your personal AI mentor. Spiritual guidance, redefined for the modern seeker.</p>
-        <div class="launch">LAUNCHING MARCH 2026</div>
-    </div>
+<body class="min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <!-- This will look for the logo you upload to GitHub -->
+            <img src="logo.png" alt="Shuvium Logo" class="h-12 w-auto">
+            <span class="font-cinzel text-2xl gold-text tracking-widest hidden md:block">SHUVIUM</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+            <a href="#how" class="hover:text-yellow-500 transition">How It Works</a>
+            <a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a>
+            <a href="#preview" class="hover:text-yellow-500 transition">Page 2 Preview</a>
+        </div>
+        <a href="#download" class="gold-btn px-6 py-2 rounded-full text-sm">Download App</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h1 class="font-cinzel text-5xl md:text-7xl mb-6 leading-tight">
+            Unlock Your <span class="gold-text">Prana</span><br>With AI Wisdom
+        </h1>
+        <p class="text-xl opacity-80 max-w-2xl mx-auto mb-10 font-light">
+            Vedic-inspired spiritual guidance powered by advanced AI. 
+            Transform your daily routine into a series of sacred micro-rituals.
+        </p>
+        
+        <!-- 15s Reel Placeholder -->
+        <div class="max-w-3xl mx-auto aspect-video glass-card rounded-2xl flex items-center justify-center mb-12 overflow-hidden relative">
+            <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                 <p class="gold-text uppercase tracking-widest text-sm mb-2">Watch the Journey</p>
+                 <button class="w-16 h-16 rounded-full border-2 border-yellow-500 flex items-center justify-center hover:bg-yellow-500/20 transition">
+                    <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-yellow-500 border-b-[10px] border-b-transparent ml-1"></div>
+                 </button>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="gold-btn px-10 py-4 rounded-xl text-lg shadow-lg">Get Started Free</button>
+            <button class="glass-card px-10 py-4 rounded-xl text-lg hover:bg-white/10 transition">View Pricing</button>
+        </div>
+    </header>
+
+    <!-- Features Section (The 3-Step Flow) -->
+    <section id="how" class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-3xl text-center">
+            <div class="text-4xl mb-4 gold-text">01</div>
+            <h3 class="font-cinzel text-xl mb-4">Deep Chat</h3>
+            <p class="opacity-70">Interact with an AI mentor trained on ancient scriptures to solve modern anxieties.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-b-yellow-500">
+            <div class="text-4xl mb-4 gold-text">02</div>
+            <h3 class="font-cinzel text-xl mb-4">Prana Economy</h3>
+            <h4 class="text-sm gold-text mb-2 italic">Exclusive Gamification</h4>
+            <p class="opacity-70">Earn fragments, claim daily rewards, and fuel your spiritual growth with our unique currency.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl text-center">
+            <div class="text-4xl mb-4 gold-text">03</div>
+            <h3 class="font-cinzel text-xl mb-4">Micro-Rituals</h3>
+            <p class="opacity-70">Personalized daily routines (Page 2) based on your age, mood, and spiritual goals.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-20 p-12 text-center opacity-60">
+        <p>&copy; 2026 Shuvium. All Rights Reserved.</p>
+        <div class="mt-4 flex justify-center gap-6 text-sm">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+        </div>
+    </footer>
+
 </body>
 </html>
