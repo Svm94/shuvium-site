@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${inter.variable} ${cinzel.variable} scroll-smooth`}>
       <body className="bg-shuvium-blue text-white font-sans antialiased overflow-x-hidden">
         <Header />
         {children}

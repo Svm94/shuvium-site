@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 glass-card border-b border-white/10 rounded-none bg-shuvium-blue/50">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center ml-2 md:ml-4">
           <Image
             src="/logo.jpg"
             alt="Shuvium Logo"

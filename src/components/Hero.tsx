@@ -61,12 +61,12 @@ export default function Hero() {
           Guiding modern seekers to inner peace through AI-personalized Vedic wisdom.
         </p>
 
-        <button
-          type="button"
-          className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2"
+        <a
+          href="#pricing"
+          className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2 block text-center"
         >
           Join the Elite Tribe
-        </button>
+        </a>
       </motion.div>
     </section>
   );
