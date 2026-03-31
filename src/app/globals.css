@@ -11,7 +11,8 @@
 }
 
 :root {
-  --background: #0A0E1A; /* Deep Space Blue */
+  /* Rich vertical gradient base colors */
+  --background: #09112C;
   --foreground: #ffffff; /* White text for dark mode */
 }
 
@@ -25,10 +26,10 @@ body {
 
 /* Custom Glassmorphism Utilities */
 @utility glass-card {
-  background: rgba(10, 14, 26, 0.4); /* Based on new 0A0E1A */
+  background: rgba(9, 17, 44, 0.4); /* Based on new #09112C Royal Blue */
   backdrop-filter: blur(24px); /* backdrop-blur-xl */
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1); /* 1px border-white/10 */
+  border: 1px solid rgba(201, 102, 21, 0.2); /* Subtle Copper/Orange border instead of white */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -37,17 +38,21 @@ body {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(201, 102, 21, 0.2);
     color: #ffffff;
   }
 
   .glass-input:focus {
     outline: none;
-    border-color: #D4AF37;
+    border-color: #C96615;
     background: rgba(255, 255, 255, 0.1);
   }
 }
 
 @utility text-glow-gold {
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+@utility text-glow-orange {
+  text-shadow: 0 0 15px rgba(201, 102, 21, 0.6);
 }
