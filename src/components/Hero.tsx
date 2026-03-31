@@ -34,24 +34,24 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-shuvium-blue">
-      {/* Radial Gradient Mesh Background */}
+      {/* Radial Gradient Mesh Background - Deep Space Blue & Shuvium Gold */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-[20%] left-[20%] w-[50vw] h-[50vw] rounded-full bg-shuvium-gold opacity-30 mix-blend-screen blur-[120px]"
+          className="absolute top-[10%] left-[20%] w-[50vw] h-[50vw] rounded-full bg-shuvium-gold opacity-30 mix-blend-screen blur-[120px]"
         />
         <motion.div
           animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.2, 0.4, 0.2],
+            scale: [1, 1.3, 1],
+            opacity: [0.4, 0.7, 0.4],
           }}
           transition={{
             duration: 20,
@@ -59,7 +59,20 @@ export default function Hero() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute bottom-[20%] right-[10%] w-[60vw] h-[60vw] rounded-full bg-shuvium-emerald opacity-20 mix-blend-screen blur-[150px]"
+          className="absolute bottom-[10%] right-[10%] w-[60vw] h-[60vw] rounded-full bg-shuvium-blue opacity-80 mix-blend-multiply blur-[150px]"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 5,
+          }}
+          className="absolute top-[40%] right-[30%] w-[40vw] h-[40vw] rounded-full bg-shuvium-gold opacity-20 mix-blend-screen blur-[100px]"
         />
       </div>
 
@@ -68,9 +81,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative z-10 w-[90%] max-w-2xl mx-auto glass-card rounded-2xl p-8 md:p-16 flex flex-col items-center text-center"
+        className="relative z-10 w-[90%] max-w-2xl mx-auto glass-card rounded-2xl p-8 md:p-16 flex flex-col items-center text-center mt-20"
       >
-        <h1 className="font-cinzel text-4xl md:text-6xl text-white mb-6 tracking-wide text-glow-gold">
+        <h1 className="font-cinzel text-4xl md:text-6xl mb-6 tracking-[0.15em] bg-gradient-to-r from-shuvium-gold to-white bg-clip-text text-transparent uppercase text-glow-gold">
           Align Your Daily Energy
         </h1>
         <p className="font-inter text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light">
@@ -83,7 +96,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             className="text-shuvium-gold font-inter text-lg"
           >
-            Thank you for joining the sanctuary. We will be in touch soon.
+            Welcome to the sanctuary. We will be in touch soon.
           </motion.div>
         ) : (
           <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col items-center gap-4">
@@ -97,7 +110,7 @@ export default function Hero() {
                   setError("");
                 }}
                 className={`w-full px-6 py-4 rounded-full glass-input placeholder-gray-400 transition-all duration-300 font-inter text-center ${
-                  error ? "border-red-500/50" : "border-shuvium-gold/30 hover:border-shuvium-gold/60"
+                  error ? "border-red-500/50" : "hover:border-shuvium-gold/60"
                 }`}
               />
               {error && (
@@ -112,9 +125,9 @@ export default function Hero() {
             </div>
             <button
               type="submit"
-              className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-wider hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2"
+              className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2"
             >
-              Join the Waitlist
+              Join the Elite Tribe
             </button>
           </form>
         )}

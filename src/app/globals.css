@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-shuvium-blue: #0A0A6F;
+  --color-shuvium-blue: #0A0E1A;
   --color-shuvium-gold: #D4AF37;
   --color-shuvium-emerald: #117855;
   --color-shuvium-orange: #C96615;
@@ -11,7 +11,7 @@
 }
 
 :root {
-  --background: #0A0A6F; /* Deep Space Blue */
+  --background: #0A0E1A; /* Deep Space Blue */
   --foreground: #ffffff; /* White text for dark mode */
 }
 
@@ -25,19 +25,19 @@ body {
 
 /* Custom Glassmorphism Utilities */
 @utility glass-card {
-  background: rgba(10, 10, 111, 0.4);
-  backdrop-filter: blur(24px);
+  background: rgba(10, 14, 26, 0.4); /* Based on new 0A0E1A */
+  backdrop-filter: blur(24px); /* backdrop-blur-xl */
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* 1px border-white/10 */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 @layer utilities {
   .glass-input {
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.5);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #ffffff;
   }
 
