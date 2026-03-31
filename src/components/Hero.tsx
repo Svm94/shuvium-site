@@ -1,37 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const validateEmail = (email: string) => {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      setError("Please enter your email address.");
-      return;
-    }
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    setError("");
-    setSubmitted(true);
-    // Future API connection here
-  };
-
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-shuvium-blue">
       {/* Radial Gradient Mesh Background - Deep Space Blue & Shuvium Gold */}
@@ -90,47 +61,12 @@ export default function Hero() {
           Guiding modern seekers to inner peace through AI-personalized Vedic wisdom.
         </p>
 
-        {submitted ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-shuvium-gold font-inter text-lg"
-          >
-            Welcome to the sanctuary. We will be in touch soon.
-          </motion.div>
-        ) : (
-          <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col items-center gap-4">
-            <div className="w-full">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  setError("");
-                }}
-                className={`w-full px-6 py-4 rounded-full glass-input placeholder-gray-400 transition-all duration-300 font-inter text-center ${
-                  error ? "border-red-500/50" : "hover:border-shuvium-gold/60"
-                }`}
-              />
-              {error && (
-                <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-red-400 text-sm mt-2 font-inter"
-                >
-                  {error}
-                </motion.p>
-              )}
-            </div>
-            <button
-              type="submit"
-              className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2"
-            >
-              Join the Elite Tribe
-            </button>
-          </form>
-        )}
+        <button
+          type="button"
+          className="px-8 py-3 rounded-full border border-shuvium-gold text-shuvium-gold font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-gold hover:text-shuvium-blue transition-colors duration-300 w-full sm:w-auto mt-2"
+        >
+          Join the Elite Tribe
+        </button>
       </motion.div>
     </section>
   );

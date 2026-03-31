@@ -30,7 +30,7 @@ export default function Pricing() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A] via-shuvium-blue/20 to-[#0A0E1A] pointer-events-none" />
       <div className="absolute right-0 top-1/4 w-[60vw] h-[60vw] rounded-full bg-shuvium-gold/5 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto relative z-10 glass-card rounded-[3rem] p-10 md:p-16 border border-shuvium-gold/20 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+      <div className="max-w-5xl mx-auto relative z-10 glass-card backdrop-blur-xl rounded-[3rem] p-10 md:p-16 border border-shuvium-gold/20 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function Pricing() {
           {/* Seeker Tier */}
           <motion.div
             variants={itemVariants}
-            className="glass-card p-10 rounded-3xl relative overflow-hidden flex flex-col border border-white/5 hover:border-white/20 transition-all duration-500"
+            className="glass-card backdrop-blur-xl p-10 rounded-3xl relative overflow-hidden flex flex-col border border-white/5 hover:border-white/20 transition-all duration-500"
           >
             <h3 className="font-cinzel text-2xl mb-2 text-white tracking-widest uppercase">
               Seeker
@@ -111,10 +111,10 @@ export default function Pricing() {
           {/* Acharya Tier */}
           <motion.div
             variants={itemVariants}
-            className="glass-card p-10 rounded-3xl relative flex flex-col border-2 border-shuvium-gold shadow-[0_0_30px_rgba(212,175,55,0.15)] bg-gradient-to-b from-shuvium-gold/10 to-transparent"
+            className="glass-card backdrop-blur-xl p-10 rounded-3xl relative flex flex-col border-2 border-shuvium-gold shadow-[0_0_30px_rgba(212,175,55,0.5)] bg-gradient-to-b from-shuvium-gold/10 to-transparent"
           >
             <div className="absolute top-0 right-0 bg-gradient-to-r from-shuvium-gold to-yellow-400 text-shuvium-blue text-xs font-bold px-6 py-2 rounded-bl-xl rounded-tr-[1.4rem] uppercase tracking-widest shadow-lg">
-              Recommended
+              Most Popular
             </div>
             <h3 className="font-cinzel text-2xl mb-2 text-shuvium-gold tracking-widest uppercase text-glow-gold">
               Acharya

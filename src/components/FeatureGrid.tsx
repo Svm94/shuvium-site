@@ -7,17 +7,17 @@ const rituals = [
   {
     title: "Precision Spirit Tech",
     description: "AI-driven guidance based on complex Support Vector Machines (SVM).",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    image: "/Precision_Spirit_Tech_version_1.jpg",
   },
   {
     title: "The Parent Reset",
     description: "Brief, powerful micro-rituals designed to restore patience and clarity.",
-    image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=800&auto=format&fit=crop",
+    image: "/The_Parent_Reset_version_1.jpg",
   },
   {
     title: "The Commuter Ritual",
     description: "Transform idle travel time into a focused sanctuary for deep energetic alignment.",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop",
+    image: "/The_Commuter_Ritual_version_1.jpg",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function FeatureGrid() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass-card rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] hover:-translate-y-2 border border-white/10 hover:border-shuvium-gold/50 flex flex-col h-full"
+              className="glass-card rounded-2xl overflow-hidden group transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:-translate-y-2 border border-white/10 hover:border-shuvium-gold/50 flex flex-col h-full"
             >
               <div className="relative w-full h-64 overflow-hidden border-b border-white/10">
                 <Image
