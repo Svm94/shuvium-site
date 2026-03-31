@@ -8,16 +8,12 @@ export default function Header() {
         <Link
           href="/"
           className="flex items-center ml-2 md:ml-4 relative w-[140px] h-[50px]"
-          style={{
-            maskImage: "radial-gradient(ellipse at center, black 40%, transparent 70%)",
-            WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 70%)"
-          }}
         >
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Shuvium Logo"
             fill
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </Link>
