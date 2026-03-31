@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
-      <body className="bg-shuvium-blue text-white font-sans antialiased">
+      <body className="bg-shuvium-blue text-white font-sans antialiased overflow-x-hidden">
+        <Header />
         {children}
       </body>
     </html>
