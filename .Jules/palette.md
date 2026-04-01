@@ -1,0 +1,3 @@
+## 2024-04-01 - Accessible Custom Toggles
+**Learning:** When building custom UI toggle groups (like the sliding currency toggle in the Pricing component), screen readers don't automatically understand the relationship or state. Wrapping them in a container with `role="group"` and `aria-label`, and adding explicit `aria-pressed` states to the buttons makes the custom component accessible. Also, adding `focus-visible` styles ensures keyboard navigators aren't lost when tabbing through the group.
+**Action:** Always add explicit ARIA roles, labels, and pressed states when creating custom grouped interactive controls. Ensure clear keyboard focus states using `focus-visible`.

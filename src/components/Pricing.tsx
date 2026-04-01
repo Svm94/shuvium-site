@@ -42,10 +42,11 @@ export default function Pricing() {
             The Prana Economy
           </h2>
 
-          <div className="inline-flex glass-card p-1 rounded-full border border-shuvium-orange/40 relative">
+          <div className="inline-flex glass-card p-1 rounded-full border border-shuvium-orange/40 relative" role="group" aria-label="Select Currency">
             <button
               onClick={() => setCurrency("INR")}
-              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+              aria-pressed={currency === "INR"}
+              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:ring-offset-2 focus-visible:ring-offset-[#09112C] ${
                 currency === "INR" ? "text-white" : "text-shuvium-orange hover:text-white"
               }`}
             >
@@ -53,7 +54,8 @@ export default function Pricing() {
             </button>
             <button
               onClick={() => setCurrency("USD")}
-              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+              aria-pressed={currency === "USD"}
+              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:ring-offset-2 focus-visible:ring-offset-[#09112C] ${
                 currency === "USD" ? "text-white" : "text-shuvium-orange hover:text-white"
               }`}
             >
@@ -103,7 +105,7 @@ export default function Pricing() {
                 <span className="text-shuvium-orange font-bold">✓</span> Basic Micro-Rituals
               </li>
             </ul>
-            <button className="w-full py-4 rounded-xl border border-shuvium-orange/50 text-shuvium-orange font-cinzel tracking-wider hover:bg-shuvium-orange/10 transition-colors uppercase text-sm">
+            <button className="w-full py-4 rounded-xl border border-shuvium-orange/50 text-shuvium-orange font-cinzel tracking-wider hover:bg-shuvium-orange/10 transition-colors uppercase text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:ring-offset-2 focus-visible:ring-offset-[#09112C]">
               Current Path
             </button>
           </motion.div>
@@ -138,7 +140,7 @@ export default function Pricing() {
                 <span className="text-shuvium-orange font-bold">✓</span> Weekly Darshan Puzzle Fragments
               </li>
             </ul>
-            <button className="w-full py-4 rounded-xl bg-gradient-to-r from-shuvium-orange to-shuvium-gold text-white font-bold font-cinzel tracking-wider hover:shadow-[0_0_20px_rgba(201,102,21,0.6)] transition-all duration-300 uppercase text-sm hover:-translate-y-1">
+            <button className="w-full py-4 rounded-xl bg-gradient-to-r from-shuvium-orange to-shuvium-gold text-white font-bold font-cinzel tracking-wider hover:shadow-[0_0_20px_rgba(201,102,21,0.6)] transition-all duration-300 uppercase text-sm hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:ring-offset-2 focus-visible:ring-offset-[#09112C]">
               Power Up Now
             </button>
           </motion.div>

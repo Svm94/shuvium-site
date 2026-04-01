@@ -19,6 +19,17 @@ test('Verify Hero and Pricing aesthetic changes', async ({ page }) => {
 
   await page.waitForTimeout(3000);
 
+  // Focus the INR button
+  const inrButton = page.getByRole('button', { name: 'INR' });
+  await inrButton.focus();
+  await page.waitForTimeout(1000);
+  await page.screenshot({ path: 'verification/pricing-inr-focus.png' });
+
+  // Tab to USD button
+  await page.keyboard.press('Tab');
+  await page.waitForTimeout(1000);
+  await page.screenshot({ path: 'verification/pricing-usd-focus.png' });
+
   // Capture Pricing Section
   await page.screenshot({ path: 'verification/pricing-accents.png' });
 });
