@@ -25,6 +25,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cinzel.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Shuvium",
+              "operatingSystem": "Web Application, Android, iOS",
+              "applicationCategory": "HealthApplication",
+              "creator": {
+                "@type": "Person",
+                "name": "Suvam Gupta"
+              },
+              "description": "An AI-powered spiritual wellness platform that combines ancient Vedic wisdom with modern AI to provide personalized micro-rituals and sacred routines.",
+              "url": "https://shuvium.com",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+      </head>
       <body className="bg-shuvium-blue text-white font-sans antialiased overflow-x-hidden">
         <Header />
         {children}
