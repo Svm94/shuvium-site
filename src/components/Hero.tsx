@@ -68,9 +68,9 @@ export default function Hero() {
           opacity: 1,
           y: 0,
           boxShadow: [
-            "0px 0px 20px rgba(212, 175, 55, 0.1)",
-            "0px 0px 40px rgba(212, 175, 55, 0.3)",
-            "0px 0px 20px rgba(212, 175, 55, 0.1)"
+            "0px 0px 30px rgba(212, 175, 55, 0.15)",
+            "0px 0px 60px rgba(212, 175, 55, 0.45)",
+            "0px 0px 30px rgba(212, 175, 55, 0.15)"
           ]
         }}
         transition={{
@@ -81,7 +81,7 @@ export default function Hero() {
             ease: "easeInOut"
           }
         }}
-        className="relative z-10 w-[90%] max-w-2xl mx-auto glass-card rounded-2xl p-8 md:p-16 flex flex-col items-center text-center mt-20 border border-shuvium-gold/30"
+        className="relative z-10 w-[90%] max-w-2xl mx-auto glass-card rounded-2xl p-8 md:p-16 flex flex-col items-center text-center mt-20 border border-shuvium-gold/40"
       >
         <h1 className="font-cinzel text-4xl md:text-6xl mb-6 tracking-[0.15em] bg-gradient-to-r from-shuvium-gold via-shuvium-orange to-white bg-clip-text text-transparent uppercase text-glow-orange">
           Align Your Daily Energy

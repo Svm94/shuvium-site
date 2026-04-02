@@ -5,10 +5,13 @@ export default function Footer() {
   return (
     <footer className="relative w-full glass-card border-t border-x-0 border-b-0 border-white/10 rounded-t-3xl p-12 mt-16 z-10 bg-shuvium-blue/80 backdrop-blur-2xl">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center opacity-80">
-        <Link href="/">
-          <span className="font-cinzel text-3xl tracking-[0.2em] font-bold bg-gradient-to-r from-shuvium-gold to-white bg-clip-text text-transparent uppercase mb-6 inline-block drop-shadow-lg">
-            SHUVIUM
-          </span>
+        <Link href="/" className="relative w-[140px] h-[50px] mb-6 inline-block">
+          <Image
+            src="/logo.png"
+            alt="Shuvium Logo"
+            fill
+            className="object-contain"
+          />
         </Link>
         <p className="font-inter text-sm text-gray-400 mb-8 font-light tracking-wide">
           &copy; 2026 Shuvium | Spiritual Wellness Redefined.
