@@ -1,18 +1,26 @@
 
-> temp-app@0.1.0 dev
+> temp-app@0.1.0 dev /app
 > next dev
 
-⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
 ▲ Next.js 16.2.1 (Turbopack)
-- Local:         http://localhost:3001
-- Network:       http://192.168.0.2:3001
-✓ Ready in 868ms
-⨯ Another next dev server is already running.
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 482ms
 
-- Local:        http://localhost:3000
-- PID:          9357
-- Dir:          /app
-- Log:          .next/dev/logs/next-development.log
-
-Run kill 9357 to stop it.
-[?25h
+○ Compiling / ...
+ GET / 200 in 7.4s (next.js: 6.3s, application-code: 1051ms)
+ GET /Precision_Spirit_Tech_version_1.jpg 404 in 1980ms (next.js: 1271ms, application-code: 709ms)
+ GET /The_Parent_Reset_version_1.jpg 404 in 1980ms (next.js: 1472ms, application-code: 508ms)
+ GET /The_Commuter_Ritual_version_1.jpg 404 in 1983ms (next.js: 1600ms, application-code: 383ms)
+⨯ The requested resource isn't a valid image for /Precision_Spirit_Tech_version_1.jpg received null
+⨯ The requested resource isn't a valid image for /The_Parent_Reset_version_1.jpg received null
+⨯ The requested resource isn't a valid image for /The_Commuter_Ritual_version_1.jpg received null
+[browser] Image with src "/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET / 200 in 90ms (next.js: 5ms, application-code: 85ms)
+ GET /The_Parent_Reset_version_1.jpg 404 in 191ms (next.js: 11ms, application-code: 180ms)
+⨯ The requested resource isn't a valid image for /The_Parent_Reset_version_1.jpg received null
+ GET /The_Commuter_Ritual_version_1.jpg 404 in 201ms (next.js: 57ms, application-code: 144ms)
+⨯ The requested resource isn't a valid image for /The_Commuter_Ritual_version_1.jpg received null
+ GET /Precision_Spirit_Tech_version_1.jpg 404 in 219ms (next.js: 105ms, application-code: 114ms)
+⨯ The requested resource isn't a valid image for /Precision_Spirit_Tech_version_1.jpg received null
+[browser] Image with src "/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
