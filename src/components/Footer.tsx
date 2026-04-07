@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center opacity-80">
         <Link href="/" className="relative w-[140px] h-[50px] mb-6 inline-block">
           <Image
-            src="/logo.png"
+            src="/shuvium-logo.png"
             alt="Shuvium Logo"
             fill
-            className="object-contain"
+            className="w-auto h-8 md:h-10 object-contain"
           />
         </Link>
         <p className="font-inter text-sm text-gray-400 mb-8 font-light tracking-wide">

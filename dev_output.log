@@ -1,18 +1,25 @@
 
-> temp-app@0.1.0 dev
+> temp-app@0.1.0 dev /app
 > next dev
 
-⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
 ▲ Next.js 16.2.1 (Turbopack)
-- Local:         http://localhost:3001
-- Network:       http://192.168.0.2:3001
-✓ Ready in 868ms
-⨯ Another next dev server is already running.
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 1158ms
 
-- Local:        http://localhost:3000
-- PID:          9357
-- Dir:          /app
-- Log:          .next/dev/logs/next-development.log
-
-Run kill 9357 to stop it.
-[?25h
+ GET / 200 in 1476ms (next.js: 790ms, application-code: 686ms)
+ GET /Precision_Spirit_Tech_version_1.jpg 404 in 525ms (next.js: 128ms, application-code: 397ms)
+⨯ The requested resource isn't a valid image for /Precision_Spirit_Tech_version_1.jpg received null
+ GET /The_Parent_Reset_version_1.jpg 404 in 583ms (next.js: 81ms, application-code: 502ms)
+⨯ The requested resource isn't a valid image for /The_Parent_Reset_version_1.jpg received null
+ GET /The_Commuter_Ritual_version_1.jpg 404 in 607ms (next.js: 182ms, application-code: 425ms)
+⨯ The requested resource isn't a valid image for /The_Commuter_Ritual_version_1.jpg received null
+[browser] Image with src "/shuvium-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET / 200 in 99ms (next.js: 6ms, application-code: 93ms)
+ GET /The_Parent_Reset_version_1.jpg 404 in 256ms (next.js: 13ms, application-code: 244ms)
+ GET /Precision_Spirit_Tech_version_1.jpg 404 in 260ms (next.js: 41ms, application-code: 219ms)
+ GET /The_Commuter_Ritual_version_1.jpg 404 in 263ms (next.js: 77ms, application-code: 187ms)
+⨯ The requested resource isn't a valid image for /The_Parent_Reset_version_1.jpg received null
+⨯ The requested resource isn't a valid image for /Precision_Spirit_Tech_version_1.jpg received null
+⨯ The requested resource isn't a valid image for /The_Commuter_Ritual_version_1.jpg received null
+[browser] Image with src "/shuvium-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

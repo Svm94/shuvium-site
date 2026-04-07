@@ -10,10 +10,10 @@ export default function Header() {
           className="flex items-center ml-2 md:ml-4 relative w-[140px] h-[50px]"
         >
           <Image
-            src="/logo.png"
+            src="/shuvium-logo.png"
             alt="Shuvium Logo"
             fill
-            className="object-contain"
+            className="w-auto h-8 md:h-10 object-contain"
             priority
           />
         </Link>
