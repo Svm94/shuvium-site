@@ -1,0 +1,3 @@
+## 2025-04-07 - Custom UI Toggle Accessibility
+**Learning:** Custom UI toggle groups must have explicit ARIA container properties (`role="group"`, `aria-label`) and their nested interactive elements must actively broadcast state with `aria-pressed`, as standard `<button>` tags don't inherently convey a toggle group relationship to screen readers. Focus states for non-native toggles are also often missing explicit keyboard boundaries.
+**Action:** Always wrap custom toggles in a `role="group"` container with an `aria-label`, ensure active states use `aria-pressed`, and apply explicit `focus-visible` utility classes for keyboard navigation.

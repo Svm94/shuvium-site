@@ -1,24 +1,38 @@
 import { test, expect } from '@playwright/test';
 
-test('Verify Hero and Pricing aesthetic changes', async ({ page }) => {
-  // Increase timeout for server boot
-  test.setTimeout(60000);
-
+test('Verify Custom UI Toggle Accessibility', async ({ page }) => {
   await page.goto('http://localhost:3000');
 
-  // Wait for load and framer motion animations
-  await page.waitForTimeout(3000);
+  // Navigate to pricing section
+  const pricingSection = page.locator('#pricing');
+  await pricingSection.scrollIntoViewIfNeeded();
 
-  // Capture Hero Section (Top)
-  await page.screenshot({ path: 'verification/hero-glow.png', fullPage: false });
+  // Find the toggle group container
+  const toggleGroup = page.locator('div[role="group"][aria-label="Select currency"]');
+  await expect(toggleGroup).toBeVisible();
 
-  // Scroll to Pricing section
-  await page.evaluate(() => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-  });
+  // Find the buttons
+  const inrButton = toggleGroup.getByRole('button', { name: 'INR' });
+  const usdButton = toggleGroup.getByRole('button', { name: 'USD' });
 
-  await page.waitForTimeout(3000);
+  await expect(inrButton).toBeVisible();
+  await expect(usdButton).toBeVisible();
 
-  // Capture Pricing Section
-  await page.screenshot({ path: 'verification/pricing-accents.png' });
+  // Initial state (USD is active by default in the component)
+  await expect(inrButton).toHaveAttribute('aria-pressed', 'false');
+  await expect(usdButton).toHaveAttribute('aria-pressed', 'true');
+
+  // Focus the USD button to verify focus styles are applied (we'll capture this in the screenshot)
+  await usdButton.focus();
+
+  // Take a screenshot of the toggle group
+  await toggleGroup.screenshot({ path: '/home/jules/verification/toggle-group-focus.png' });
+
+  // Click INR button and verify state changes
+  await inrButton.click();
+  await expect(inrButton).toHaveAttribute('aria-pressed', 'true');
+  await expect(usdButton).toHaveAttribute('aria-pressed', 'false');
+
+  // Take another screenshot after clicking
+  await toggleGroup.screenshot({ path: '/home/jules/verification/toggle-group-clicked.png' });
 });

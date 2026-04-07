@@ -42,10 +42,15 @@ export default function Pricing() {
             The Prana Economy
           </h2>
 
-          <div className="inline-flex glass-card p-1 rounded-full border border-shuvium-orange/40 relative">
+          <div
+            className="inline-flex glass-card p-1 rounded-full border border-shuvium-orange/40 relative"
+            role="group"
+            aria-label="Select currency"
+          >
             <button
               onClick={() => setCurrency("INR")}
-              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+              aria-pressed={currency === "INR"}
+              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:rounded-full ${
                 currency === "INR" ? "text-white" : "text-shuvium-orange hover:text-white"
               }`}
             >
@@ -53,7 +58,8 @@ export default function Pricing() {
             </button>
             <button
               onClick={() => setCurrency("USD")}
-              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+              aria-pressed={currency === "USD"}
+              className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:rounded-full ${
                 currency === "USD" ? "text-white" : "text-shuvium-orange hover:text-white"
               }`}
             >
