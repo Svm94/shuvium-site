@@ -92,7 +92,7 @@ export default function Hero() {
 
         <a
           href="#pricing"
-          className="px-8 py-3 rounded-full border border-shuvium-orange text-shuvium-orange font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-orange hover:text-white hover:shadow-[0_0_20px_rgba(201,102,21,0.6)] transition-all duration-300 w-full sm:w-auto mt-2 block text-center"
+          className="px-8 py-3 rounded-full border border-shuvium-orange text-shuvium-orange font-cinzel tracking-[0.1em] uppercase hover:bg-shuvium-orange hover:text-white hover:shadow-[0_0_20px_rgba(201,102,21,0.6)] focus-visible:ring-2 focus-visible:ring-shuvium-orange focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-[#09112C] transition-all duration-300 w-full sm:w-auto mt-2 block text-center"
         >
           Join the Elite Tribe
         </a>
