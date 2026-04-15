@@ -1,3 +1,7 @@
 ## 2025-04-08 - Custom UI Toggle Group Accessibility
 **Learning:** Custom UI toggle groups lacking native radio semantics require explicit structural and state annotations to be accessible. Specifically, they must be wrapped in a container with `role="group"` and an `aria-label`, interactive elements must use `aria-pressed` to indicate their current state, and `focus-visible` utility classes should be included to support keyboard navigation explicitly.
 **Action:** When creating custom toggle groups or segmented controls, always apply `role="group"`, an appropriate `aria-label`, `aria-pressed` for active states, and `focus-visible` classes for keyboard users.
+
+## 2025-04-09 - Bypass Blocks (Skip to Content)
+**Learning:** Next.js applications with sticky headers or repetitive top-level navigation often fail WCAG SC 2.4.1 (Bypass Blocks) because keyboard users are forced to tab through the entire navigation repeatedly to reach main content. Adding a visually hidden "Skip to content" link that becomes visible on `focus-visible` provides a significant accessibility boost without altering the visual design for mouse users. The target container (`<main>`) must also be explicitly configured to receive focus styles correctly (e.g., adding `tabIndex={-1}` dynamically or simply ensuring it has an `id` that matches the skip link's `href`, along with focus styles if interactive).
+**Action:** Always implement a skip-to-content bypass block early in the `<body>` of the application shell (e.g., in `layout.tsx`) referencing the primary content container.

@@ -51,8 +51,16 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-shuvium-blue text-white font-sans antialiased overflow-x-hidden">
+        <a
+          href="#main-content"
+          className="absolute left-4 top-4 z-[100] -translate-y-96 rounded-md bg-shuvium-orange px-4 py-2 text-sm font-bold text-white transition-transform focus-visible:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        >
+          Skip to main content
+        </a>
         <Header />
-        {children}
+        <main id="main-content" tabIndex={-1} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shuvium-orange">
+          {children}
+        </main>
       </body>
     </html>
   );
