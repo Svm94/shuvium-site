@@ -1,3 +1,7 @@
 ## 2025-04-08 - Custom UI Toggle Group Accessibility
 **Learning:** Custom UI toggle groups lacking native radio semantics require explicit structural and state annotations to be accessible. Specifically, they must be wrapped in a container with `role="group"` and an `aria-label`, interactive elements must use `aria-pressed` to indicate their current state, and `focus-visible` utility classes should be included to support keyboard navigation explicitly.
 **Action:** When creating custom toggle groups or segmented controls, always apply `role="group"`, an appropriate `aria-label`, `aria-pressed` for active states, and `focus-visible` classes for keyboard users.
+
+## 2025-04-23 - Skip to Content Bypass Block Accessibility
+**Learning:** When implementing 'Skip to content' links (bypass blocks) for keyboard accessibility, smoothly transitioning them visually using CSS transforms (`-translate-y-full` to `translate-y-0`) handles visibility gracefully. Also, the main content container it targets must have `tabIndex={-1}` and `focus-visible` styles so it properly receives and indicates keyboard focus without disrupting regular tab flow.
+**Action:** Always implement a visually hidden bypass block early in the layout hierarchy targeting the main content wrapper. Utilize transforms instead of absolute positioning toggles for smoother visuals. Ensure the target main element can receive programmatic focus and visibly shows it.
