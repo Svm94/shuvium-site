@@ -1,3 +1,6 @@
 ## 2025-04-08 - Custom UI Toggle Group Accessibility
 **Learning:** Custom UI toggle groups lacking native radio semantics require explicit structural and state annotations to be accessible. Specifically, they must be wrapped in a container with `role="group"` and an `aria-label`, interactive elements must use `aria-pressed` to indicate their current state, and `focus-visible` utility classes should be included to support keyboard navigation explicitly.
 **Action:** When creating custom toggle groups or segmented controls, always apply `role="group"`, an appropriate `aria-label`, `aria-pressed` for active states, and `focus-visible` classes for keyboard users.
+## 2024-05-19 - Skip to Content Component Architecture
+**Learning:** For a locked viewport SPA with absolute stability needs, skip-to-content links should be placed at the highest layout level (`App.tsx` or similar), bypassing specific routing components to target the main content block directly. Using transforms (`-translate-y-[200%]`) and zero-opacity shifts avoids jarring layout recalculations when receiving `focus-visible`.
+**Action:** When implementing skip-to-content in full viewport lock apps, use fixed positioning and transform transitions, ensuring the target element has `tabIndex={-1}` and `focus-visible` styling (`ring-inset`) for a seamless keyboard user journey.
