@@ -1,3 +1,7 @@
 ## 2025-04-08 - Custom UI Toggle Group Accessibility
 **Learning:** Custom UI toggle groups lacking native radio semantics require explicit structural and state annotations to be accessible. Specifically, they must be wrapped in a container with `role="group"` and an `aria-label`, interactive elements must use `aria-pressed` to indicate their current state, and `focus-visible` utility classes should be included to support keyboard navigation explicitly.
 **Action:** When creating custom toggle groups or segmented controls, always apply `role="group"`, an appropriate `aria-label`, `aria-pressed` for active states, and `focus-visible` classes for keyboard users.
+
+## 2025-04-09 - Bypass Blocks (Skip to Content)
+**Learning:** Adding global accessibility features like a "Skip to content" link requires architectural consideration in a React Router setup. Using a persistent layout component (`<RootLayout />`) with an `<Outlet />` ensures the skip link is available globally without interfering with individual page structures. Additionally, targeting a `<main>` container with `tabIndex={-1}` enables it to receive the programmatic focus triggered by the skip link without disrupting the natural DOM tab order.
+**Action:** When implementing skip-to-content functionality in a SPA, use a layout wrapper and apply `tabIndex={-1}` with an ID to the main content container to ensure proper focus routing for keyboard users.
