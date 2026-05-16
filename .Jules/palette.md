@@ -1,3 +1,7 @@
 ## 2025-04-08 - Custom UI Toggle Group Accessibility
 **Learning:** Custom UI toggle groups lacking native radio semantics require explicit structural and state annotations to be accessible. Specifically, they must be wrapped in a container with `role="group"` and an `aria-label`, interactive elements must use `aria-pressed` to indicate their current state, and `focus-visible` utility classes should be included to support keyboard navigation explicitly.
 **Action:** When creating custom toggle groups or segmented controls, always apply `role="group"`, an appropriate `aria-label`, `aria-pressed` for active states, and `focus-visible` classes for keyboard users.
+
+## 2025-05-16 - Skip to Content Links using RootLayout
+**Learning:** Skip-to-content links can break the specific layout styling of pages, especially on SPAs with viewport constraints, if added to individual pages. Using CSS transforms (`-translate-y-[200%]`) instead of toggling `top` positions ensures smoother animation on focus. Additionally, to globally support skip links without intrusive changes, wrapping routes in a RootLayout with a target `tabIndex={-1}` main content area allows clean focus delegation.
+**Action:** Always implement skip-to-content functionality globally via a RootLayout wrapper utilizing CSS transforms for smooth transition and explicitly adding `tabIndex={-1}` and `focus-visible` styling to the target container.
